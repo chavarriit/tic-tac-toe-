@@ -1,0 +1,86 @@
+/* Gameboard styling */
+#gameboard {
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+}
+h1 {
+    font-size: 3em;
+    color: var(--font-color);
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('game.jpg');
+    background-size: cover; 
+
+/* Square (cell) styling */
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: solid 6px black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circle (O) marker styling */
+.circle {
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    border: 25px solid green;
+    box-sizing: border-box;
+}
+
+/* X marker styling */
+.x {
+    height: 190px;
+    width: 190px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.x:before,
+.x:after {
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+
+/* Vertical line of the X */
+.x:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+
+/* Horizontal line of the X */
+.x:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
+footer {
+    margin-top: 20px;
+    font-size: 1em;
+    color: var(--font-color);
+    text-align: center;
+}
+}
